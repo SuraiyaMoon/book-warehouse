@@ -8,6 +8,7 @@ import Signup from './components/Signup/Signup';
 import Inventories from './components/Inventories/Inventories';
 import { ToastContainer } from 'react-toastify';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import BookDetails from './components/BookDetails/BookDetails';
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/inventory' element={<RequireAuth>
           <Inventories />
+        </RequireAuth>}></Route>
+        <Route path='/inventory/:bookId' element={<RequireAuth>
+          <BookDetails></BookDetails>
         </RequireAuth>}></Route>
       </Routes>
 

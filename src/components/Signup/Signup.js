@@ -8,10 +8,6 @@ import {
     useNavigate,
 } from "react-router-dom";
 
-
-
-
-
 const Signup = () => {
     const navigate = useNavigate();
     const [
@@ -19,7 +15,7 @@ const Signup = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    ] = useCreateUserWithEmailAndPassword(auth);
 
     const handleSignUp = event => {
         const email = event.target.email.value;
@@ -28,7 +24,7 @@ const Signup = () => {
         if (password === confirmPassword) {
             createUserWithEmailAndPassword(email, password)
             navigate('/home')
-            toast('sent Email verification')
+            // toast('sent Email verification')
         }
         else {
             alert('your information did not match')
@@ -36,6 +32,8 @@ const Signup = () => {
         }
         event.preventDefault()
     }
+
+
     return (
         <div className='d-flex align-items-center my-4 form-container container w-50'>
             <div className='container'>
@@ -48,7 +46,6 @@ const Signup = () => {
                 </form>
                 <p>Already have an account? <Link to="/login" className='text-black'>Go to Login</Link></p>
             </div>
-            {error}
         </div>
     );
 };
