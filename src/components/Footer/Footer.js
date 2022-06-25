@@ -3,9 +3,9 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className='mt-4 bg-black text-white'>
-            <div className="container row d-flex justify-content-center py-3">
-                <div className="col-lg-3 col-12">
+        <div className='mt-4 bg-black text-white d-flex justify-content-center'>
+            <div className="container row  py-3">
+                <div className="col-lg-4 col-md- col-12">
                     <h4>Customer Service</h4>
                     <ul className='list-unstyled'>
                         <li>Store Location</li>
@@ -18,7 +18,7 @@ const Footer = () => {
                         <li>Terms and Condition</li>
                     </ul>
                 </div>
-                <div className="col-lg-3 col-12">
+                <div className="col-lg-4 col-12">
                     <h4>My Account</h4>
                     <ul className='list-unstyled '>
                         <li>My Orders</li>
@@ -27,7 +27,7 @@ const Footer = () => {
                         <li>FAQ's</li>
                     </ul>
                 </div>
-                <div className="col-lg-3 col-12">
+                <div className="col-lg-4 col-12">
                     <h4>Get In Touch</h4>
                     <ul className='list-unstyled'>
                         <li><a href="">01877564534</a></li>

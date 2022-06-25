@@ -1,9 +1,17 @@
 import React from 'react';
+import useInventory from '../../Hooks/UseInventory';
+import Inventory from '../Inventory/Inventory';
 
 const Inventories = () => {
+    const [inventories] = useInventory();
     return (
         <div>
-            <h5>Inventory</h5>
+            {
+                inventories.map(inventory => <Inventory
+                    key={inventory._id}
+                    inventory={inventory}
+                ></Inventory>)
+            }
         </div>
     );
 };
