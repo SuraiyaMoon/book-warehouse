@@ -6,6 +6,9 @@ import Header from './components/Header/Header';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Inventories from './components/Inventories/Inventories';
+import { ToastContainer } from 'react-toastify';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+
 
 function App() {
   return (
@@ -16,8 +19,14 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
-        <Route path='/inventory' element={<Inventories />}></Route>
+        <Route path='/inventory' element={<RequireAuth>
+          <Inventories />
+        </RequireAuth>}></Route>
       </Routes>
+
+
+      <ToastContainer />
+
     </div>
   );
 }
