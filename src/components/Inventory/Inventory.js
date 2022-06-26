@@ -12,7 +12,7 @@ const Inventory = ({ inventory }) => {
     }
 
 
-    const { picture, price, suppier, name, about, _id } = inventory;
+    const { quantity, picture, price, suppier, name, about, _id } = inventory;
     return (
         <div className='col-lg-4 col-12 col-md-3'>
             <Card style={{ width: '20rem', height: "730px" }}>
@@ -23,6 +23,7 @@ const Inventory = ({ inventory }) => {
                         {about}
                     </Card.Text>
                     <h6>Price: ${price}</h6>
+                    <h6>Quantity: {quantity}</h6>
                     <h6>Supplier: {suppier}</h6>
                     <Button onClick={() => navigateToInventoryById(_id)} variant="dark">Update</Button>
                 </Card.Body>

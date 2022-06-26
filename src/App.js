@@ -9,6 +9,9 @@ import Inventories from './components/Inventories/Inventories';
 import { ToastContainer } from 'react-toastify';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import BookDetails from './components/BookDetails/BookDetails';
+import AddItem from './components/AddItem/AddItem';
+import ManageItem from './components/ManageItem/ManageItem';
+import Blogs from './components/Blogs/Blogs';
 
 
 function App() {
@@ -20,11 +23,18 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/inventory' element={<RequireAuth>
           <Inventories />
         </RequireAuth>}></Route>
         <Route path='/inventory/:bookId' element={<RequireAuth>
           <BookDetails></BookDetails>
+        </RequireAuth>}></Route>
+        <Route path='/addItem' element={<RequireAuth>
+          <AddItem></AddItem>
+        </RequireAuth>}></Route>
+        <Route path='/manageItem' element={<RequireAuth>
+          <ManageItem></ManageItem>
         </RequireAuth>}></Route>
       </Routes>
 
