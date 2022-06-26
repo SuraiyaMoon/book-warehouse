@@ -1,13 +1,17 @@
 import React from 'react';
 import useBookDetail from '../../Hooks/useBookDetail';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 const BookDetails = () => {
+    const navigate = useNavigate();
     const { bookId } = useParams();
     const [detail] = useBookDetail(bookId)
     console.log(detail)
+    const navigateToInventory = () => {
+        navigate('/inventory')
+    }
 
     return (
         <div>
@@ -20,11 +24,14 @@ const BookDetails = () => {
                     <Card.Text>
                         {detail.about}
                     </Card.Text>
-
-                    <Button variant="dark">Update</Button>
-
+                    <Button variant="dark">Restack</Button>
                 </Card.Body>
             </Card>
+            <div onClick={navigateToInventory} className="d-grid my-4 ">
+                <Button className='w-50 mx-auto' variant="dark" size="sm">
+                    See all Inventories
+                </Button>
+            </div>
 
 
         </div>

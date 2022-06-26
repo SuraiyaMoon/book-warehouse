@@ -3,17 +3,12 @@ import Footer from '../Footer/Footer';
 import banner from '../../image/banner.jpg'
 import useInventory from '../../Hooks/UseInventory';
 import Inventory from '../Inventory/Inventory';
-import Button from 'react-bootstrap/Button';
-import { useNavigate } from "react-router-dom";
 
 
 
 const Home = () => {
     const [inventories] = useInventory();
-    const navigate = useNavigate();
-    const navigateToInventory = () => {
-        navigate('/inventory')
-    }
+
     return (
         <div className='mt-4 '>
             <section>
@@ -36,11 +31,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <div onClick={navigateToInventory} className="d-grid my-4 ">
-                <Button className='w-50 mx-auto' variant="dark" size="sm">
-                    See all Inventories
-                </Button>
-            </div>
+
             <Footer></Footer>
 
         </div>

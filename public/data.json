@@ -1,0 +1,66 @@
+[
+    {
+      "_id": "62b85de88c9f2eef5d809821",
+      "picture": "./images/action.jpg",
+      "quantity": 3,
+      "price": 41,
+      "name": "Lord of the flies",
+      "suppier": "Josefina Patton",
+      "about": "Lord of the Flies is a 1954 novel by the Nobel Prize-winning British author William Golding. The plot concerns a group of British boys who are stranded on an uninhabited island and their disastrous attempts to govern themselves."
+    },
+    {
+      "_id": "62b85de8582fdb2894aca840",
+      "picture": "./images/classic.jpg",
+      "quantity": 10,
+      "price": 55,
+      "name": "Doriyan Gray",
+      "suppier": "Milagros Bradley",
+      "about": "An attractive Englishman's image is captured in a painting that keeps him from ageing, when he exchanges his soul for eternal beauty. But for every sin that he commits, his image in the portrait rots."
+    },
+    {
+      "_id": "62b85de88ef821940d823a41",
+      "picture": "./images/fantasy.jpg",
+      "quantity": 13,
+      "price": 50,
+      "name": "Game of Throne",
+      "suppier": "Brock Gentry",
+      "about": "Nine noble families wage war against each other in order to gain control over the mythical land of Westeros. Meanwhile, a force is rising after millenniums and threatens the existence of living men."
+    },
+    {
+      "_id": "62b85de8b2dd6a8e87890b76",
+      "picture": "./images/fiction-book.jpg",
+      "quantity": 8,
+      "price": 50,
+      "name": "Nineteen Eighty-Four",
+      "suppier": "Stanton Mcdonald",
+      "about": "Nineteen Eighty-Four is a dystopian social science fiction novel and cautionary tale written by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime."
+    },
+    {
+      "_id": "62b85de816fa0d9723bfd5de",
+      "picture": "./images/mistey.jpg",
+      "quantity": 12,
+      "price": 45,
+      "name": "Silent Forest",
+      "suppier": "Salazar Garner",
+      "about": "A hearing-impaired boy transfers to a school for children with special needs. But his excitement about blending into a new environment immediately turns into fear when he witnesses the reality happening in the school."
+    },
+    {
+      "_id": "62b85de899f58765ef8a266a",
+      "picture": "./images/romance.jpg",
+      "quantity": 13,
+      "price": 78,
+      "name": "Love",
+      "suppier": "Garner Sharpe",
+      "about": "Murphy, an American living in Paris, enters an emotionally charged relationship with Electra, who happens to be unstable. To spice up their relationship, they invite a third partner, their neighbour."
+    },
+    {
+      "_id": "62b85de8503bf4b6c369fc94",
+      "picture": "./images/tragedy.jpg",
+      "quantity": 10,
+      "price": 49,
+      "name": "Tragic",
+      "suppier": "Annette Levy",
+      "about": "Kaine Reynolds wants nothing more than solitude. After an unthinkable tragedy destroys his family, he's cut off all ties to his former life so he can battle his grief the only way he knows how. Alone. So when Piper Campbell knocks on his door, rambling on about being his new neighbor, he slams the door in her face."
+    }
+   
+  ]
