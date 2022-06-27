@@ -6,7 +6,7 @@ const Inventories = () => {
     const handleItemDeleting = id => {
         const proceed = window.confirm('Are you want to proceed')
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://murmuring-temple-03575.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: "DELETE",
             })

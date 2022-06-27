@@ -16,7 +16,7 @@ const Signup = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     if (error) {
         <p>{error.message}</p>
     }
@@ -28,7 +28,7 @@ const Signup = () => {
         if (password === confirmPassword) {
             createUserWithEmailAndPassword(email, password)
             navigate('/home')
-            // toast('sent Email verification')
+            toast('sent Email verification')
         }
         else {
             alert('your information did not match')

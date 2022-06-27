@@ -24,7 +24,7 @@ const BookDetails = () => {
 
 
 
-            fetch(`http://localhost:5000/inventory/${id}`, {
+            fetch(`https://murmuring-temple-03575.herokuapp.com/inventory/${id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json"

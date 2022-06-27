@@ -14,7 +14,7 @@ const AddItem = () => {
     const onSubmit = data => {
         const email = user.email;
           //send data to the server
-        fetch('http://localhost:5000/inventory', {
+        fetch('https://murmuring-temple-03575.herokuapp.com/inventory', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
