@@ -3,6 +3,7 @@ import Footer from '../Footer/Footer';
 import banner from '../../image/banner.jpg'
 import useInventory from '../../Hooks/UseInventory';
 import Inventory from '../Inventory/Inventory';
+import PopularItem from '../PopularItem/PopularItem';
 
 
 
@@ -30,6 +31,7 @@ const Home = () => {
                     }
                 </div>
             </section>
+            <PopularItem></PopularItem>
 
 
             <Footer></Footer>

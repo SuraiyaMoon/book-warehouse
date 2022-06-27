@@ -18,6 +18,12 @@ const Blogs = () => {
                     NoSQL databases are either key-value pairs
                 </p>
             </article>
+            <article>
+                <h5>Question: Whats the purpose of JWT and how does it work?</h5>
+                <p>JWT full form is JSON web token.Its use for secuirely data transmition.
+                    Once a user login a token created.By this token user can access data what are available for user by this token.
+                </p>
+            </article>
         </div>
     );
 };
