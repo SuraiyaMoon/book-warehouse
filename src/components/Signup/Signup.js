@@ -17,6 +17,9 @@ const Signup = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    if (error) {
+        <p>{error.message}</p>
+    }
 
     const handleSignUp = event => {
         const email = event.target.email.value;

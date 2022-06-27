@@ -12,6 +12,7 @@ import BookDetails from './components/BookDetails/BookDetails';
 import AddItem from './components/AddItem/AddItem';
 import ManageItem from './components/ManageItem/ManageItem';
 import Blogs from './components/Blogs/Blogs';
+import NotFound from './components/NotFound/NotFound';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path='/manageItem' element={<RequireAuth>
           <ManageItem></ManageItem>
         </RequireAuth>}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
 
 
