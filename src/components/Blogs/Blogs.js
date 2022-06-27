@@ -8,16 +8,14 @@ const Blogs = () => {
                 <h5>Question: Whats the Difference Between Javascript and Node js?</h5>
                 <p>1. Javascript Is a programming Language. On the other side Node js is a runtime environment. <br />
                     2. Js can only run in browser .Node js can be run outside the browser.
-
-
                 </p>
             </article>
             <article>
-                <h5>Question: When Should you use node js and when should you use mongodb?</h5>
-                <p>1. Javascript Is a programming Language. On the other side Node js is a runtime environment. <br />
-                    2. Js can only run in browser .Node js can be run outside the browser.
-
-
+                <h5>Question: Whats the Difference Between SQL and NoSQL?</h5>
+                <p>1. A NoSQL database has dynamic schema for unstructured data.On the other hand SQL data is Structured.
+                    <br />
+                    2. SQL databases are table-based.
+                    NoSQL databases are either key-value pairs
                 </p>
             </article>
         </div>

@@ -1,26 +1,25 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 
 
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-
-        console.log(data);
-        // const picture = event.target.url.value;
-        // const name = event.target.name.value;
-        // const price = event.target.url.value;
-        // const quantity = event.target.quantity.value;
-        // const suppier = event.target.suppier.value;
+        const email = user.email;
+          //send data to the server
         fetch('http://localhost:5000/inventory', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data, email)
         })
             .then(res => res.json())
             .then(result => {
@@ -28,19 +27,7 @@ const AddItem = () => {
                 alert('item Added')
 
             })
-
-
     }
-    // const handleAddItem = event => {
-    //     event.preventDefault();
-    //     
-    //     const item = { picture, name, price, quantity, suppier }
-    //     console.log(item)
-
-
-        //send data to the server
-      
-
     return (
         <div className='container'>
             <h3>

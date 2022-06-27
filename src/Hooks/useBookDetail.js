@@ -14,6 +14,6 @@ const useBookDetail = bookId => {
         }
     }, [bookId])
 
-    return [detail]
+    return [detail, setDetail]
 }
 export default useBookDetail;

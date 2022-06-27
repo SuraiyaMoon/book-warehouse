@@ -8,7 +8,7 @@ const BookDetails = () => {
 
     const navigate = useNavigate();
     const { bookId } = useParams();
-    const [detail] = useBookDetail(bookId);
+    const [detail, setDetail] = useBookDetail(bookId);
     const { _id, name, price, about, quantity, suppier } = detail;
     const [number, setNumber] = useState(quantity)
     console.log(quantity)
@@ -23,7 +23,8 @@ const BookDetails = () => {
             detail.quantity = newQuantity;
 
 
-            fetch(`http://localhost:5000/inventory/${bookId}`, {
+
+            fetch(`http://localhost:5000/inventory/${id}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json"

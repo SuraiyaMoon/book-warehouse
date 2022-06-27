@@ -6,6 +6,7 @@ import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -43,7 +44,7 @@ const Login = () => {
     }
 
     return (
-        <div className='d-flex align-items-center my-4 form-container container w-50 bg-light'>
+        <div className='p-3 my-4 form-container container w-50 bg-light'>
             <div className='container'>
                 <h2 className='my-4'>Log in To Book WareHouse</h2>
                 <form onSubmit={handleLogin} >
@@ -55,6 +56,12 @@ const Login = () => {
 
                 <p>Forget password? <Link onClick={resetPassword} to="" className='text-black'>Reset password</Link></p>
             </div>
+            <div className='w-30'>
+                <hr />
+            </div>
+            <SocialLogin></SocialLogin>
+
+
         </div>
     );
 };

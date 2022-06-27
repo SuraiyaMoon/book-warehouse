@@ -16,8 +16,6 @@ const Inventories = () => {
                     const restItem = inventories.filter(inventory => inventory._id !== id);
                     setInventories(restItem)
                 })
-
-
         }
 
     }

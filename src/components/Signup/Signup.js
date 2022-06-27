@@ -7,6 +7,7 @@ import {
     Link,
     useNavigate,
 } from "react-router-dom";
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -35,7 +36,7 @@ const Signup = () => {
 
 
     return (
-        <div className='d-flex align-items-center my-4 form-container container w-50'>
+        <div className='bg-light p-2 my-4 form-container container w-50'>
             <div className='container'>
                 <h2 className='my-4'>Signup To Book WareHouse</h2>
                 <form onSubmit={handleSignUp} >
@@ -46,6 +47,10 @@ const Signup = () => {
                 </form>
                 <p>Already have an account? <Link to="/login" className='text-black'>Go to Login</Link></p>
             </div>
+            <div className='w-30'>
+                <hr />
+            </div>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
