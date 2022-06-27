@@ -11,7 +11,7 @@ const AddItem = () => {
         const quantity = event.target.name.value;
         const supplier = event.target.name.value;
 
-        const item = { url, name }
+        const item = { url, name, price, quantity, supplier }
         console.log(item)
 
 
@@ -32,17 +32,17 @@ const AddItem = () => {
 
     }
     return (
-        <div>
+        <div className='container'>
             <h3>
                 Add new Item
             </h3>
             <form onSubmit={handleAddItem}>
-                <input className='my-2' name='url' placeholder='Url' type="text" /> <br />
-                <input className='my-2' name='name' placeholder='Book name' type="text" /><br />
-                <input className='my-2' name='price' placeholder='Enter Price' type="text" /><br />
-                <input className='my-2' name='name' placeholder='Quantity' type="text" /><br />
-                <input className='my-2' name='name' placeholder='Your name' type="text" /><br />
-                <input className='my-2' type="submit" value="Add Item" />
+                <input className='my-2 w-100' name='url' placeholder='Url' type="text" /> <br />
+                <input className='my-2 w-100' name='name' placeholder='Book name' type="text" /><br />
+                <input className='my-2 w-100' name='price' placeholder='Enter Price' type="text" /><br />
+                <input className='my-2 w-100' name='name' placeholder='Quantity' type="text" /><br />
+                <input className='my-2 w-100' name='name' placeholder='Your name' type="text" /><br />
+                <input className='my-2 w-100' type="submit" value="Add Item" />
             </form>
 
         </div>

@@ -23,6 +23,21 @@ const BookDetails = () => {
             detail.quantity = newQuantity;
 
 
+            fetch(`http://localhost:5000/inventory/${bookId}`, {
+                method: "PUT",
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(detail)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data, 'success')
+                    alert('user added successfully')
+
+                })
+
+
         }
         else {
             alert('You can not Decrease amount')
