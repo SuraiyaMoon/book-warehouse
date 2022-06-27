@@ -13,9 +13,11 @@ const Inventories = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
-                    const restItem = inventories.filter(inventory => inventory._id !== id)
+                    const restItem = inventories.filter(inventory => inventory._id !== id);
                     setInventories(restItem)
                 })
+
+
         }
 
     }

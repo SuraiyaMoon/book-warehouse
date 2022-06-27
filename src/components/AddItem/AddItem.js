@@ -1,48 +1,59 @@
 import React from 'react';
+import { useForm } from "react-hook-form";
+
 
 
 
 const AddItem = () => {
-    const handleAddItem = event => {
-        event.preventDefault();
-        const url = event.target.url.value;
-        const name = event.target.name.value;
-        const price = event.target.url.value;
-        const quantity = event.target.name.value;
-        const supplier = event.target.name.value;
 
-        const item = { url, name, price, quantity, supplier }
-        console.log(item)
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
 
-
-        //send data to the server
-
+        console.log(data);
+        // const picture = event.target.url.value;
+        // const name = event.target.name.value;
+        // const price = event.target.url.value;
+        // const quantity = event.target.quantity.value;
+        // const suppier = event.target.suppier.value;
         fetch('http://localhost:5000/inventory', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(item)
+            body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                event.target.reset()
+            .then(result => {
+                console.log(result)
+                alert('item Added')
+
             })
 
+
     }
+    // const handleAddItem = event => {
+    //     event.preventDefault();
+    //     
+    //     const item = { picture, name, price, quantity, suppier }
+    //     console.log(item)
+
+
+        //send data to the server
+      
+
     return (
         <div className='container'>
             <h3>
                 Add new Item
             </h3>
-            <form onSubmit={handleAddItem}>
-                <input className='my-2 w-100' name='url' placeholder='Url' type="text" /> <br />
-                <input className='my-2 w-100' name='name' placeholder='Book name' type="text" /><br />
-                <input className='my-2 w-100' name='price' placeholder='Enter Price' type="text" /><br />
-                <input className='my-2 w-100' name='name' placeholder='Quantity' type="text" /><br />
-                <input className='my-2 w-100' name='name' placeholder='Your name' type="text" /><br />
-                <input className='my-2 w-100' type="submit" value="Add Item" />
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <input placeholder='Book name' {...register("name", { required: true, maxLength: 20 })} /> <br />
+                <input className='my-3' placeholder='Url' type="text" {...register("url", {  maxLength: 20 })} /> <br /> 
+                <input placeholder='description' {...register("description", { pattern: /^[A-Za-z]+$/i })} /> <br />
+                <input className='my-3' placeholder='Price' type="number" {...register("price", { min: 18, max: 99 })} /> <br />
+                <input placeholder='Quantity' type="number" {...register("quantity", { min: 5, max: 50 })} /> <br />
+                <input className='my-3' placeholder='supplier' {...register("suppier", { pattern: /^[A-Za-z]+$/i })} /> <br />
+                <input className='mb-3' type="submit" />
             </form>
 
         </div>
