@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Book warehouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Book-warehouse](https://book-warehouse-e9b9d.web.app/).
 
 ## Available Scripts
 
@@ -9,10 +9,27 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000]((https://book-warehouse-e9b9d.web.app/) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+***
+## Description  about projects
+
+this Is a website for book storing.First i created header and root route.then i create a sign up and log in form .for responsiveness i use react-bootstrap.then i show data from my server in the client side.
+
+## Framework and Library
+1. React-bootstrap
+
+2.react-Router
+
+3.React
+
+4.Firebase
+
+5.React-firebase-hooks
+
+6.for server side i use Node js,mongodb,express
 
 ### `npm test`
 

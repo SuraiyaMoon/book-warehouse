@@ -14,12 +14,12 @@ const AddItem = () => {
     const onSubmit = data => {
         const email = user.email;
           //send data to the server
-        fetch('https://murmuring-temple-03575.herokuapp.com/inventory', {
+        fetch('https://book-warehouse.herokuapp.com/inventory', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(data, email)
+            body: JSON.stringify(data)
         })
             .then(res => res.json())
             .then(result => {

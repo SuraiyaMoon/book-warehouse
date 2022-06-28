@@ -5,7 +5,7 @@ const useBookDetail = bookId => {
     useEffect(() => {
         try {
 
-            fetch(`https://murmuring-temple-03575.herokuapp.com/inventory/${bookId}`)
+            fetch(`https://book-warehouse.herokuapp.com/inventory/${bookId}`)
                 .then(res => res.json())
                 .then(data => setDetail(data))
 
